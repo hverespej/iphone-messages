@@ -1,0 +1,58 @@
+.chat-box {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.speech-bubble {
+  display: inline-block;
+  position: relative;
+  clear: both;
+  padding: 15px;
+  margin: 1px 0px 1px 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.speech-bubble.me {
+  float: right;
+  color: #ffffff;
+  background: #0066ff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#80b3ff), to(#0066ff));
+  background: -moz-linear-gradient(#80b3ff, #0066ff);
+  background: -o-linear-gradient(#80b3ff, #0066ff);
+  background: linear-gradient(#80b3ff, #0066ff);
+}
+
+.speech-bubble.you {
+  float: left;
+  color: #000000;
+  background: #f2f2f2;
+}
+
+.speech-bubble.tail {
+  margin-bottom: 15px;
+}
+
+.speech-bubble.tail:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  border-style: solid;
+}
+
+.speech-bubble.tail.me:after {
+  left: -moz-calc(100% - 30px);
+  left: -webkit-calc(100% - 30px);
+  left: -o-calc(100% - 30px);
+  left: calc(100% - 30px);
+  border-width: 8px 0px 0px 20px;
+  border-color: #0066ff transparent;
+}
+
+.speech-bubble.tail.you:after {
+  left: 10px;
+  border-width: 8px 20px 0px 0px;
+  border-color: #f2f2f2 transparent;
+}
